@@ -20,7 +20,7 @@
 // ***********   CREALITY PRINTERS W/V4.X.X BOARD - F103 CPU   **************
 //===========================================================================
 //------------------------------ V4.2.2 Board -------------------------------
-//#define ENDER3_V422_BOARD
+#define ENDER3_V422_BOARD
 //#define ENDER3_MAX_V422_BOARD
 //#define ENDER3_V2_V422_BOARD
 //#define ENDER5_V422_BOARD
@@ -73,8 +73,8 @@
 //#define ENDER5_OEM
 //#define ENDER5_PLUS_OEM
 //#define ENDER6_OEM
-//#define ENDER6_PETSFANG //Source: https://support.th3dstudio.com/helpcenter/ender-6-5015-ezabl-petsfang-mount/
-//#define CUSTOM_PROBE
+//#define ENDER6_PETSFANG //Source: https://www.th3dstudio.com/hc/downloads/stl-files/ender-6/ender-6-5015-ezabl-petsfang-mount/
+#define CUSTOM_PROBE
 
 // Ender 3 V2 - LCD Setting
 // If you converted your Ender 3 V2 LCD to the 12864 Version, Uncomment the below line.
@@ -172,7 +172,7 @@
   * If the probe is left of the nozzle the offset on X is NEGATIVE
   * If the probe is in front of the nozzle the offset on Y is NEGATIVE
   */
-  #define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+  #define NOZZLE_TO_PROBE_OFFSET { -45, -10, 0 }
 #endif
 
 
@@ -310,9 +310,9 @@
 // There are 2 ways to connect the BL Touch to the V4.2.X boards - All on the 5 pin header or using 3 pins on the 5 pin header + Z Endstop port
 // For details on these 2 types of connections refer to our help center article here: https://support.th3dstudio.com/helpcenter/creality-v4-2-2-v4-2-7-board-bl-touch-wiring-options/
 // If you want to use the BL-Touch uncomment the BLTOUCH line below and uncomment #define CUSTOM_PROBE above and then enter in your offsets above in the CUSTOM PROBE section.
-//#define BLTOUCH
+#define BLTOUCH
 // If you are using the 5 pin header for all the BL Touch connections, uncomment the below line
-//#define BLTOUCH_ON_5PIN
+#define BLTOUCH_ON_5PIN
 
 // MANUAL MESH LEVELING ----------------------------
 // If you want to use manual mesh leveling you can enable the below option. This is for generating a MANUAL mesh WITHOUT a probe.
@@ -377,7 +377,7 @@
 #if ENABLED(EZOUT_ENABLE_J1)
   #define EZOUT_ENABLE
 #endif
- 
+
 //Ender 6 V431 Board Settings
 #if ENABLED(ENDER6_V431_BOARD)
 	#define SERIAL_PORT 1
@@ -1146,8 +1146,8 @@
 
   #define BAUDRATE 115200
 
-  #ifndef MOTHERBOARD
-    #define MOTHERBOARD BOARD_CREALITY_V422
+    #ifndef MOTHERBOARD
+      #define MOTHERBOARD BOARD_CREALITY_V422
   #endif
 
   #if ENABLED(CUSTOM_ESTEPS)

@@ -1,3 +1,7 @@
+# Install Guide
+
+I used [this handy guide](https://support.th3dstudio.com/helpcenter/creality-ender-3-32-bit-firmware/) to build the firmware in vscode on a mac.
+
 # Unified 2.0 Firmware
 
 Unified Firmware 2.0 is the latest easy to use firmware for select 3D printers and boards from TH3D Studio. Both 8 bit and 32 bit based machines/boards are supported thanks to being built on **Marlin 2.0.9.3**.
